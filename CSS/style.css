@@ -1,0 +1,213 @@
+:root {
+    --primary: #d65d8a;
+    --bg: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Poppins, sans-serif;
+    background-color: var(--bg);
+    color: rgb(252, 252, 252);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid #53001f;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-judul {
+    font-size: 30px;
+    color: #cc5782;
+    font-style: italic;
+    text-shadow: 3px 4px 5px rgba(92, 91, 91, 0.82);
+}
+
+.navbar .navbar-nav a {
+    color: #ffffff;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(1);
+}
+
+.content1 {
+    /* backround penuh 1 layar */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    color: #fcb6d0;
+    background-image: url(../img/ocr.png);
+    background-repeat: no-repeat;
+    /* penuh 1 layar */
+    background-size:40%;
+    background-position: right;
+    margin-right: 10%;
+    position: relative;
+}
+
+/* gradasi backround bagian bawah */
+.content1::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    bottom: 0;
+    background: linear-gradient(0deg, rgb(0, 0, 0) 3%, rgb(255, 255, 255, 0) 50%);
+}
+
+.content1 .judul{
+    padding: 10rem 10%;
+    max-width: 50rem;
+}
+
+.content1 .judul h1{
+    font-size: 2rem;
+    color: #cc5782;
+    text-shadow: 1px 1px 3px rgb(180, 137, 870, 5%);
+    line-height: 1.4;
+}
+
+.content1 .judul p {
+    font-size: 1.2rem;
+    font-weight: 100;
+    line-height: 1.6;
+    color: #ffffff;
+    margin-top: 1rem;
+    line-height: 1.4;
+    text-shadow: 1px 1px 3px rgb(180, 137, 870, 5%);
+    mix-blend-mode: difference;
+}
+
+.tutor, .download{
+    padding: 8rem 7% 1.4rem;
+}
+
+.tutor h2, .download h2{
+    color: #cc5782;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.tutor p,
+.download p {
+    text-align: center;
+    /* agar text ditengah */
+    max-width: 30rem;
+    /* agar tidak terlalu lebar */
+    margin: auto;
+    /* agar text ditengah */
+    font-size: 1.2rem;
+    font-weight: 100;
+    line-height: 1.6;
+}
+
+/* Gambar skill */
+.tutor .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    justify-content:center;
+    align-items: center;
+    box-shadow: 10px 10px 39px 0px rgba(196, 196, 196, 0.75);
+    -webkit-box-shadow: 10px 10px 39px 0px rgba(196, 196, 196, 0.75);
+    -moz-box-shadow: 10px 10px 39px 0px rgba(196, 196, 196, 0.75);
+    border-radius: 10px;
+}
+
+.tutor .row .menu-card {
+    text-align: center;
+    padding-bottom: 5rem;
+}
+.tutor .row .menu-card img {
+    border-radius: 10%;
+    /*gambar skill agar bulat */
+    width: 50%;
+    box-shadow: 10px 10px 23px -12px rgba(196, 196, 196, 0.75);
+    -webkit-box-shadow: 10px 10px 23px -12px rgba(196, 196, 196, 0.75);
+    -moz-box-shadow: 10px 10px 23px -12px rgba(196, 196, 196, 0.75);
+    border-radius: 10px;
+}
+
+.download .dw {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    margin-left: 500px;
+    margin-right: 500px;
+    margin-bottom: 100px;
+    border-radius: 8px;
+}
+
+.download .dw:hover{
+    background-color: rgb(243, 204, 210);
+    border-radius: 8px;
+}
+
+.download .dw a{
+    text-decoration: none;
+    color: #000000;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: var(--primary);
+    text-align: center;
+    padding: 5px;
+}
+
+.socials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials a{
+    height: 9%;
+    width: 9%;
+}
+
+.ig{
+    height: 20%;
+    width: 20%;
+}
+
+.wa{
+    height: 40%;
+    width: 40%;
+}
+
+.email{
+    height: 30%;
+    width: 30%;
+}
